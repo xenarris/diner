@@ -1,5 +1,4 @@
 <?php
-
 //This is my controller
 
 //Turn on error reporting
@@ -17,8 +16,14 @@ $f3 -> route('GET /', function() {
     //display the homepage
     $view = new Template();
     echo $view->render('views/home.html');
-}
+    }
 );
+
+$f3 -> route("GET /breakfast", function () {
+    //display the breakfast page
+    $view = new Template();
+    echo $view->render('views/breakfast.html');
+});
 
 //Run fat free
 $f3->run();
